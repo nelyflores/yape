@@ -6,6 +6,7 @@ const morganjson      = require('morgan-json');
 const apiUsers        = require('./api/users'); //Endpoints relacionados al User model
 
 const app = express();
+var path = require('path');
 const db  = levelup('./api/users', {valueEncoding: 'json'});
 
 const format = morganjson({
@@ -17,18 +18,29 @@ const format = morganjson({
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+app.use(express.static('node_modules'));
 app.use(morgan(format));
 
 let router = express.Router();
 
+
+
 router.get('/', (req, res) => {
   res.json({ name: 'yape-api',version: "0.0.1"});
+ 
 });
 
 app.use('/api',apiUsers(router,db));
 
 const port = process.env.PORT || 3000;
 
+app.get('/',function(req, res) {
+	res.sendFile(__dirname+'/index.html');
+	app.use('/static',express.static(path.join(__dirname,'node_modules')));
+	app.use('/static',express.static(path.join(__dirname,'assets')));
+});
+
 app.listen(port, () => {
+
   console.log('Server running on port '+port+'!');
 });
