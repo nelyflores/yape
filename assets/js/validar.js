@@ -1,5 +1,7 @@
 var telefono=document.getElementById("icon_prefix");
 var check=document.getElementById("test5");
+var botonvalidar=document.getElementById("validando");
+
 console.log(telefono);
 console.log(check);
 var res=0;
@@ -23,6 +25,18 @@ function validacheckbox(){
 		alert("debes llenar los 2 campos");
 	}
 };
+
+botonvalidar.addEventListener("click",enviardatosapi)
+function enviardatosapi(){
+	$.post("http://localhost:3000/api/registerNumber",{
+		"phone":telefono.value,
+		"terms":check.value
+	}).then (function (response){
+		console.log(response);
+	}).catch(function(error){
+		console.log(error);
+	});
+}
 
 
 
