@@ -2,8 +2,69 @@
 <html>
 <head>
 	<title>yape</title>
+	<link rel="stylesheet" type="text/css" href="../materialize-css/dist/css/materialize.min.css">
+	<link rel="stylesheet" href="../css/vista2.css">
 </head>
 <body>
-<h1>ya</h1>
+<div class="container">
+	<div class="row">
+	<div class="col s12 center">
+		<img src="../img/bcp-logo.png">
+	</div>
+
+	</div>
+	<div class="row">
+		<div class="col s12 center">
+			<h2>Registra tu tarjeta débito BCP</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12 center">
+			<p>Por ahora solo aceptamos cuentas de ahorra</p>
+			<p>y/o corriente en soles</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12">
+		  <i class="material-icons prefix">
+			<img class="icono" src="../img/card.png">
+		  </i>
+		  
+          <input id="nombreusuario" type="text" class="validate" required>
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12 center">
+			<span><img src="../img/scan.png">Escanear tarjeta</span>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s6">
+			<p>Fecha de vencimiento</p>
+		</div>
+		<div class="col s6">
+			<div class="row">
+				<div class="col s6">
+					<div class="input-field ">
+						<input id="numerotarjeta"  class="validate" placeholder="Mes">	
+					</div>
+					<div class="col s6">
+						<div class="input-field ">
+						<input id="numerotarjeta"  class="validate" placeholder="Año">
+						</div>	
+					</div>	
+				</div>
+			</div>
+
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12 center">
+			<a class="btn waves-effect waves-light disabled center" name="action" id="validando" href="vista7.html" >Continuar </a>
+		</div>
+	</div>
+</div>
 </body>
 </html>
