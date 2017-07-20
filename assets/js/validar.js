@@ -12,6 +12,7 @@ function validaTelefono(){
  	 if(valor.length==10 ) {
  		res=1;
  		console.log(res);
+ 		localStorage.setItem("Telefono", valor);
   	}else{
   		alert("agrega un número de 10 digitos")
 	}
@@ -28,14 +29,22 @@ function validacheckbox(){
 
 botonvalidar.addEventListener("click",enviardatosapi)
 function enviardatosapi(){
+
 	$.post("http://localhost:3000/api/registerNumber",{
 		"phone":telefono.value,
 		"terms":check.value
 	}).then (function (response){
-    alert("tu codigo es : "+ response.data.code)
+		var dataclave=response.data.code;
+    alert("tu codigo es : "+ dataclave);
 		console.log(response);
-    console.log(response.data.code);
+		console.log(dataclave)
+ 
+    localStorage.setItem("Clave", dataclave);
 	}).catch(function(error){
 		console.log(error);
 	});
+	
+	
 }
+
+
