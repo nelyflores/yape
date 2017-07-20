@@ -32,11 +32,10 @@ function enviardatosapi(){
 		"phone":telefono.value,
 		"terms":check.value
 	}).then (function (response){
+    alert("tu codigo es : "+ response.data.code)
 		console.log(response);
+    console.log(response.data.code);
 	}).catch(function(error){
 		console.log(error);
 	});
 }
-
-
-
