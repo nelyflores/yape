@@ -30,8 +30,8 @@
 						<img class="icono" src="../img/user.png">
 					</i>
 					<label for="icon_prefix">Nombre</label>
-          <input id="icon_prefix" type="text" class="validate">
-          
+          <input id="nombreusuario" type="text" class="validate" required>
+
         </div>
           <div class=" col s12">
 
@@ -39,8 +39,8 @@
 						<img class="icono" src="../img/message-gray.png">
 					</i>
 					<label for="icon_prefix">correo@ejemplo.com</label>
-          <input id="icon_prefix" type="text" class="validate">
-          
+          <input id="correo" type="text" class="validate" required>
+
         </div>
          <div class=" col s12">
 
@@ -48,8 +48,8 @@
 						<img class="icono" src="../img/lock.png">
 					</i>
 					<label for="icon_prefix">Ingresa clave de 6 digitos</label>
-          <input id="icon_prefix" type="text" class="validate">
-          
+          <input id="clave" class="validate" type="password" required>
+
         </div>
 
 				<div class="row">
@@ -63,11 +63,12 @@
 
   </a>
     </div>
-	
+
   </div>
 </div>
 <script type="text/javascript" src="../jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="../materialize-css/dist/js/materialize.min.js"></script>
+<script type="text/javascript" src="../js/validarusuario.js"></script>
 
 </body>
 </html>
