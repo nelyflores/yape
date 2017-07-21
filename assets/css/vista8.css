@@ -1,3 +1,27 @@
 body{
 	background-color: #212121;
 }
+html,body{
+  height:100%;
+  width:100%;
+}
+.blanco{
+	color: white;
+}
+.container{
+	margin-top: 100px;
+margin-left: 0px;
+padding: 50px;
+width: 100%;
+height: 100%;
+}
+span{
+	color: #159181;
+font-size: 50px;
+}
+.imagenes{
+	    margin-top: 50px;
+}
+.botones{
+	    margin: 100px;
+}
