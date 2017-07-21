@@ -35,7 +35,7 @@ function enviardatosapi(){
 		"terms":check.value
 	}).then (function (response){
 		var dataclave=response.data.code;
-    alert("tu codigo es : "+ dataclave);
+    alert("tu codigo es : "+ response.data.code);
 		console.log(response);
 		console.log(dataclave)
  
